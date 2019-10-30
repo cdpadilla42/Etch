@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+  <html>
+    <head></head>
+    <body>
+
+      <div id="grid-container">
+
+      </div>
+
+      <script>
+
+        var container = document.querySelector('#grid-container');
+
+        // Try to use inline-block and br elements to positions divs in your document.
+        // for example: set css style to box to display as inline block
+        // then, in your loop, if i modulo 16 returns 1, instert a br
+
+        for (var i = 1; i < 257; i++) {
+          let newDiv = document.createElement('div');
+          newDiv.setAttribute('class', "box " + i);
+          container.appendChild(newDiv);
+        } 
+
+      </script>
+    </body>
+  </html>
