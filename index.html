@@ -7,19 +7,38 @@
 
       </div>
 
+      <style>
+        .box {
+          height: 10px;
+          width: 10px;
+          border: 1px solid black;
+        }
+        #grid-container {
+          display: grid;
+          grid-template: repeat(16, 10px) / repeat(16, 10px);
+        }
+      </style>
+
       <script>
 
         var container = document.querySelector('#grid-container');
-
-        // Try to use inline-block and br elements to positions divs in your document.
-        // for example: set css style to box to display as inline block
-        // then, in your loop, if i modulo 16 returns 1, instert a br
 
         for (var i = 1; i < 257; i++) {
           let newDiv = document.createElement('div');
           newDiv.setAttribute('class', "box " + i);
           container.appendChild(newDiv);
         } 
+
+        // target array of boxs
+        var boxes = document.querySelectorAll('.box')
+        // function: change class to hover
+        function changeColor() {
+          this.classList('hover');
+        }
+        // add eventListener
+        boxes.forEach((box) => {
+          box.addEventListener('click', changeColor)
+        });
 
       </script>
     </body>
