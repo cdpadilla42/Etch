@@ -3,19 +3,24 @@
     <head></head>
     <body>
 
+      <button>New Sketch</button>
+
       <div id="grid-container">
 
       </div>
 
       <style>
         .box {
-          height: 10px;
-          width: 10px;
+          height: 100%;
+          width: 100%;
           border: 1px solid black;
         }
         #grid-container {
           display: grid;
-          grid-template: repeat(16, 10px) / repeat(16, 10px);
+          grid-template: repeat(16, 1fr) / repeat(16, 1fr);
+          width: 500px;
+          height: 500px;
+          border: 3px solid green;
         }
         .hover {
           background-color: blue;

@@ -10,10 +10,9 @@ var container = document.querySelector('#grid-container');
         var boxes = document.querySelectorAll('.box')
         // function: change class to hover
         function changeColor(e) {
-          // this.classList('hover');
           let currentBox = e.target;
           currentBox.classList.add('hover')
-          console.log(currentBox.getAttribute('class'));
+          
         }
         // add eventListener
         boxes.forEach((box) => {
